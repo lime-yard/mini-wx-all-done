@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "待办详情",
+    "usingComponents": {
+        "van-panel": "@vant/weapp/panel",
+        "van-button": "@vant/weapp/button"
+    }
+}

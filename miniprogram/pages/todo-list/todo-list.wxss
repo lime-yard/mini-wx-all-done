@@ -1,0 +1,17 @@
+/* miniprogram/pages/index/index.wxss */
+
+
+.add-wrap {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 80rpx;
+    text-align: center;
+}
+.add-icon {
+    color: #00B853;
+    font-size: 120rpx!important;
+}
+.add-icon:active {
+    color: #94DFB7
+}

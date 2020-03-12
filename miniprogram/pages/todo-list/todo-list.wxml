@@ -1,0 +1,22 @@
+
+<view>
+    <van-cell-group>
+        <van-cell
+            wx:for="{{allTodoList}}" wx:key="_id"
+            center
+            title="{{item.title}}"
+            title-width="560rpx"
+            value="内容"
+            is-link 
+            url="/pages/todo-info/todo-info?id={{item._id}}"
+        />
+    </van-cell-group>
+    
+    <view class="add-wrap">
+        <van-icon
+            bindtap="handleAdd"
+            custom-class="add-icon"
+            name="add" />
+    </view>
+    
+</view>

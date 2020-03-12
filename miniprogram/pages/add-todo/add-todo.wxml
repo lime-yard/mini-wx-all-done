@@ -1,0 +1,18 @@
+<view>
+<van-field
+    value="{{title}}"
+    required
+    label="标题"
+    placeholder="请输入待办标题"
+    bind:change="handleTitleChange"
+  />
+<van-field
+    value="{{desc}}"
+    required
+    label="描述"
+    placeholder="请输入待办描述"
+    bind:change="handleDescChange"
+  />
+  <van-button type="primary" block bind:click="handleSave">保存</van-button>
+
+</view>

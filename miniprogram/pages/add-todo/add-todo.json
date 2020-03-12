@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "添加待办",
+    "usingComponents": {
+        "van-field": "@vant/weapp/field",
+        "van-button": "@vant/weapp/button"
+    }
+}

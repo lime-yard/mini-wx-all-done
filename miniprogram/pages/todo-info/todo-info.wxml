@@ -1,0 +1,7 @@
+<van-panel title="{{todoInfo.title}}" status="状态" use-footer-slot>
+  <view>{{todoInfo.desc}}</view>
+  <view slot="footer">
+    <van-button size="small">按钮</van-button>
+    <van-button size="small" type="danger">按钮</van-button>
+  </view>
+</van-panel>
