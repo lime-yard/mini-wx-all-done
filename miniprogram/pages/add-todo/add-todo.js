@@ -22,14 +22,11 @@ Page({
     handleSave(){
         const {title, desc} = this.data;
         const _data = { title, desc, status: 0 };
-        db.collection('todos')
-        .add({
-            data: {
-                ..._data,
-                user: _.inc(3)
-            }
-        })
-        .then((result)=>{
+        wx.cloud.callFunction({
+            name: 'addTodo',
+            data: _data,
+        }).then((result)=>{
+            console.log(result,999)
             wx.navigateBack()
         })
     },
