@@ -8,7 +8,7 @@
         "backgroundColor": "#F6F6F6",
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#F6F6F6",
-        "navigationBarTitleText": "待办日清",
+        "navigationBarTitleText": "日清待办",
         "navigationBarTextStyle": "black"
     },
     "usingComponents": {},

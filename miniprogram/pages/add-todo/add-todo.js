@@ -1,4 +1,5 @@
 const db = wx.cloud.database();
+const _ = db.command;
 
 Page({
 
@@ -23,7 +24,10 @@ Page({
         const _data = { title, desc, status: 0 };
         db.collection('todos')
         .add({
-            data: _data
+            data: {
+                ..._data,
+                user: _.inc(3)
+            }
         })
         .then((result)=>{
             wx.navigateBack()

@@ -1,4 +1,5 @@
 const db = wx.cloud.database();
+
 Page({
 
     /**
@@ -6,6 +7,18 @@ Page({
      */
     data: {
         todoInfo: {}
+    },
+
+    handleAdd(){
+        wx.cloud.callFunction({
+            name: 'addTodo',
+            data: {
+                name: 'lsrr',
+                sex: 1
+            }
+        }).then((result)=>{
+            console.log(result)
+        })
     },
 
     /**

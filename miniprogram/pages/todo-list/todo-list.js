@@ -1,25 +1,28 @@
 const db = wx.cloud.database();
+const globalData = getApp().globalData;
+
 Page({
     data: {
         allTodoList: []
     },
-    onLoad(){
+    onLoad() {},
+
+    onShow() {
         this.getTodoList()
     },
 
-    onShow(){
-        this.getTodoList()
-    },
-
-    getTodoList(){
-        db.collection('todos')
-            .get()
-            .then((result) => {
-                this.setData({ allTodoList: result.data })
+    getTodoList() {
+        wx.cloud.callFunction({
+            name: 'getTodoList'
+        }).then((result) => {
+            console.log(result, 333)
+            this.setData({
+                allTodoList: result.result.data
             })
+        })
     },
 
-    handleAdd(){
+    handleAdd() {
         wx.navigateTo({
             url: '/pages/add-todo/add-todo',
         })
