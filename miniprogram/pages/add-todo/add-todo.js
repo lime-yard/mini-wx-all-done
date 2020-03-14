@@ -8,7 +8,8 @@ Page({
      */
     data: {
         title: '',
-        desc: ''
+        desc: '',
+        priority: 0,
     },
 
     handleTitleChange(e){
@@ -19,9 +20,15 @@ Page({
         this.setData({ desc: e.detail })
     },
 
+    handlePriorityChange(e) {
+        this.setData({ priority: e.detail })
+    },
+
     handleSave(){
-        const {title, desc} = this.data;
-        const _data = { title, desc, status: 0 };
+        const {title, desc, priority} = this.data;
+        const _data = { title, desc, priority, handleDescChange(e){
+        this.setData({ desc: e.detail })
+    },status: 0 };
         wx.cloud.callFunction({
             name: 'addTodo',
             data: _data,

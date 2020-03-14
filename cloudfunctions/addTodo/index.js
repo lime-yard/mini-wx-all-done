@@ -6,7 +6,7 @@ const db = cloud.database();
 // 云函数入口函数
 exports.main = async (event, context) => {
     const wxContext = cloud.getWXContext();
-    const {title, desc, status } = event;
+    const {title, desc, priority, status } = event;
     console.log(event, context,444)
     try{
         const result = await db.collection('todos').add({
@@ -14,6 +14,7 @@ exports.main = async (event, context) => {
                 _openid: wxContext.OPENID,
                 title, 
                 desc,
+                priority,
                 status
             }
         });

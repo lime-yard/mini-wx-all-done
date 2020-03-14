@@ -13,6 +13,12 @@
     placeholder="请输入待办描述"
     bind:change="handleDescChange"
   />
+  <van-field
+    value="{{priority}}"
+    required
+    label="优先级"
+    bind:change="handlePriorityChange"
+  />
   <van-button type="primary" block bind:click="handleSave">保存</van-button>
 
 </view>
